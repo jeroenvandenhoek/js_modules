@@ -1,0 +1,25 @@
+[package]
+name = "wasm_in_js_modules"
+version = "0.1.0"
+authors = ["Jeroen van den Hoek"]
+description = "A test for implementing wasm into javascript projects"
+edition = "2018"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+wasm-bindgen = "0.2.58"
+js-sys = "0.3.35"
+
+[dependencies.web-sys]
+version = "0.3.35"
+features = [
+	"console",
+	"Document",
+	"HtmlElement",
+	"Node",
+	"Element",
+	"Window"
+]
+
